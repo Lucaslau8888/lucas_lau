@@ -16,8 +16,8 @@
     <p>This is the homepage.</p>
 
     <script>
-        // Load navbar dynamically
-        fetch('navbar.html')
+        // Load navbar dynamically from the includes folder
+        fetch('includes/navbar.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('navbar').innerHTML = data;

@@ -2,14 +2,14 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    color: #333;
+    color: black; /* Set font color to black */
     margin: 0;
     padding: 0;
 }
 
 nav {
     background-color: #333;
-    color: black;
+    color: white;
     padding: 10px;
 }
 
@@ -25,14 +25,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
 h1 {
-    color: #333;
+    color: black; /* Set header color to black */
 }
 
 p {
-    color: #666;
+    color: black; /* Set paragraph color to black */
 }
