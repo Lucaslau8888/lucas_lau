@@ -1,18 +1,60 @@
 /* style.css */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: Trebuchet MS, sans-serif;
+    background-color: black;
     color: black; /* Set font color to black */
     margin: 0;
-    padding: 0;
+    padding: 0px;
+    font-size:18px;
+    text-align: justify;
 }
+
 
 nav {
-    background-color: #333;
+    background-color: black;
     color: white;
-    padding: 10px;
+    padding: 20px;
+}
+#home{
+    padding: 12px; /* Add padding for spacing */
+    }
+
+#home h1{
+    font-size:70px;
+    padding:0px;
+
 }
 
+#sec1
+{
+    display: flex; /* Use Flexbox to arrange text and image side by side */
+    justify-content: space-between; /* Add space between the image and the text */
+    align-items: center; /* Vertically center the content */
+}
+
+.image-section {
+padding-left:80px;
+    flex:0.5; /* Fixed size for the image */
+}
+/* Text section style */
+.text-section {
+    flex: 1.1; /* Make text section take up remaining space */
+    margin-left: 20px; /* Space between the image and text */
+}
+
+/* Optional: Styling for the paragraph */
+.text-section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#me{
+    width: 350px; /* Set image size */
+    height: 350px; /* Set image size */
+    object-fit: cover; /* Crop the image to maintain aspect ratio */
+    border-radius: 50%; /* Make it a circle */
+
+    }
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -21,7 +63,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 nav ul li a {
@@ -30,9 +72,54 @@ nav ul li a {
 }
 
 h1 {
-    color: black; /* Set header color to black */
+    color: white; /* Set header color to black */
 }
 
 p {
-    color: black; /* Set paragraph color to black */
+    color: white;
+         font-size:20px !important;
+         text-align: justify !important;
+/* Set paragraph color to black */
+}
+
+
+
+/* Mobile View (Responsive) */
+@media screen and (max-width: 768px) {
+    #sec1 {
+        flex-direction: column; /* Stack vertically */
+        text-align: center;
+
+    }
+#home h1{
+    font-size:50px;
+    padding:0px;
+        text-align: center;
+
+}
+    .image-section {
+        padding-left: 0;
+        margin-bottom: 20px;
+        justify-content: center;
+        display: flex;
+    }
+
+    #me {
+        width: 250px;
+        height: 250px;
+    }
+
+    .text-section {
+        margin-left: 0;
+        padding: 0 15px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .text-section p {
+        font-size: 18px !important;
+        text-align: justify !important;
+    }
 }
