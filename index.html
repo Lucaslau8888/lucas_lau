@@ -17,7 +17,7 @@
 
     <script>
         // Load navbar dynamically from the includes folder
-        fetch('includes/navbar.html')
+        fetch('./includes/_navbar.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('navbar').innerHTML = data;
