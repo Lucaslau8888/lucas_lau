@@ -20,8 +20,10 @@ nav {
     }
 
 #home h1{
-    font-size:70px;
+    font-size:65px;
     padding:0px;
+    text-align: center;
+
 
 }
 
@@ -39,7 +41,8 @@ padding-left:80px;
 /* Text section style */
 .text-section {
     flex: 1.1; /* Make text section take up remaining space */
-    margin-left: 20px; /* Space between the image and text */
+    margin-left: 0px; /* Space between the image and text */
+    padding-right:8px;
 }
 
 /* Optional: Styling for the paragraph */
@@ -77,7 +80,7 @@ h1 {
 
 p {
     color: white;
-         font-size:20px !important;
+         font-size:18px !important;
          text-align: justify !important;
 /* Set paragraph color to black */
 }
@@ -123,3 +126,42 @@ p {
         text-align: justify !important;
     }
 }
+
+/* Adding keyframe animations */
+
+
+
+/* Slide-in effect for the text */
+@keyframes slideInFromBottom  {
+    from {
+        transform: translateY(100%); /* Start from 100% below */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0); /* End at normal position */
+        opacity: 1;
+    }
+}
+
+/* Apply the fade-in to the header */
+#home h1 {
+    animation: slideInFromBottom 1.2s ease-out;
+}
+
+/* Apply the bounce effect to the image */
+#me {
+    animation: slideInFromBottom 1.2s ease-out;
+}
+
+/* Apply the slide-in effect to the text section */
+.text-section {
+    animation: slideInFromBottom 1.2s ease-out;
+        font-size: 18px !important;
+    text-align: justify !important;
+    color: white;
+    padding: 0 15px;  
+
+}
+
+/* You can control animation timing with delay, iteration count, etc., if needed */
+
