@@ -15,7 +15,7 @@
     <h1>Welcome to My Website!</h1>
     <p>This is the homepage.</p>
 
-    <script>
+        <script>
         // Load navbar dynamically from the includes folder
         fetch('./includes/_navbar.html')
             .then(response => response.text())
@@ -23,5 +23,6 @@
                 document.getElementById('navbar').innerHTML = data;
             });
     </script>
+
 </body>
 </html>
