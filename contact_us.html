@@ -17,10 +17,10 @@
 
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html">Resume</a></li>
-                <li><a href="index.html">Project</a></li>
-                <li><a href="contact_us.html" style="color: #1e90ff;">Contact</a></li>
+                <li><a href="index.html">Home</a></li> |
+                <li><a href="index.html">Resume</a></li> |
+                <li><a href="index.html">Project</a></li> |
+                <li><a href="contact_us.html"  style="color: #1e90ff;">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -28,13 +28,24 @@
     <h1>Contact Us</h1>
     <p>If you have any questions, feel free to reach out to us.</p>
 
-<!--    <script>-->
-<!--        // Load navbar dynamically from the includes folder-->
-<!--        fetch('includes/navbar.html')-->
-<!--            .then(response => response.text())-->
-<!--            .then(data => {-->
-<!--                document.getElementById('navbar').innerHTML = data;-->
-<!--            });-->
-<!--    </script>-->
+
+
+
+
+<div id="footer"></div>
+
+
+
+    <script>
+        // Load footer dynamically
+        fetch('./includes/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+
+
+
 </body>
 </html>

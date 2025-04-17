@@ -1,7 +1,7 @@
 /* style.css */
 body {
     font-family: Trebuchet MS, sans-serif;
-    background-color: black;
+    background-color: #f5f5f5;
     color: black; /* Set font color to black */
     margin: 0;
     padding: 0px;
@@ -9,12 +9,17 @@ body {
     text-align: justify;
 }
 
+   #title1 {
+      font-size: 60px;
+      color: #3a7ca5; /* calm bold blue */
+      text-shadow:
+        2px 2px #ffffff,
+        4px 4px #a4cbe3; /* soft light blue shadow */
+    }
 
-nav {
-    background-color: black;
-    color: white;
-    padding: 20px;
-}
+
+
+
 #home{
     padding: 12px; /* Add padding for spacing */
     }
@@ -32,6 +37,7 @@ nav {
     display: flex; /* Use Flexbox to arrange text and image side by side */
     justify-content: space-between; /* Add space between the image and the text */
     align-items: center; /* Vertically center the content */
+    padding-bottom:18px;
 }
 
 
@@ -47,10 +53,12 @@ padding-left:80px;
     flex: 1.1; /* Make text section take up remaining space */
     margin-left: 0px; /* Space between the image and text */
     padding-right:8px;
+
 }
 
 /* Optional: Styling for the paragraph */
 .text-section p {
+  font-weight: 100 !important;
     font-size: 16px;
     line-height: 1.6;
 }
@@ -62,6 +70,20 @@ padding-left:80px;
     border-radius: 50%; /* Make it a circle */
 
     }
+
+
+
+    nav {
+    background-color: #f5f5f5;
+    color: black;
+    padding: 20px;
+
+
+}
+
+
+
+
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -69,15 +91,18 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 15px;
+    display: inline-block;
+    margin-right: 20px;
 }
 
+
+
 nav ul li a {
-    color: white;
+    color: black;
     text-decoration: none;
     transition: color 0.3s ease;
     font-size:20px !important;
+    font-weight:bold;
   letter-spacing: 0.5px;
 
 
@@ -89,11 +114,11 @@ nav ul li a:hover {
 }
 
 h1 {
-    color: white; /* Set header color to black */
+    color: black; /* Set header color to black */
 }
 
 p {
-    color: white;
+    color: black;
          font-size:18px !important;
          text-align: justify !important;
 /* Set paragraph color to black */
@@ -101,11 +126,12 @@ p {
 
 
 #sec2 {
-padding:18px 10px 10px 10px;
+padding:10px 10px 50px 10px;
+background-color:#eeeeee;
 }
 
 #section3 {
-padding:18px 10px 10px 10px !important;
+padding:10px 10px 10px 10px !important;
 }
 
 
@@ -120,7 +146,7 @@ padding:18px 10px 10px 10px !important;
 
 .skill-item {
     width: 100px;
-    color: white;
+    color: black;
         flex-direction: column;
     align-items: center; /* centers both image and text */
     text-align: center;
@@ -129,7 +155,7 @@ padding:18px 10px 10px 10px !important;
 .skill-item img {
     width: 100px;
     height: 100px;
-    object-fit: contain;
+    object-fit: fill;
     margin-bottom: 10px;
     transition: transform 0.3s ease;
 }
@@ -139,21 +165,21 @@ padding:18px 10px 10px 10px !important;
 }
 
 .skill-item p {
-    font-size: 16px;
+    font-size: 18px;
     margin: 0;
-        text-align: center !important;
+    text-align: center !important;
 
 }
 
 .site-footer {
-  background-color: black;
-  color: white;
+  background-color: #f5f5f5;
+  color: black;
   padding: 80px 20px;
   font-family: Arial, sans-serif;
 }
 
 .footer-content {
-border-top:0.2px solid white;
+border-top:0.2px solid #D3D3D3;
 
   display: flex;
   justify-content: space-between;
@@ -173,7 +199,7 @@ border-top:0.2px solid white;
 }
 
 .footer-section p, .footer-section a {
-  color: white;
+  color: #808080;
   font-size: 14px;
   text-decoration: none;
 }
@@ -185,7 +211,7 @@ border-top:0.2px solid white;
 .social-icons a {
   font-size: 20px;
   margin-right: 15px;
-  color: white;
+  color: #808080;
   transition: color 0.3s ease;
 }
 
@@ -194,7 +220,69 @@ border-top:0.2px solid white;
 }
 
 
+#section3 {
+}
 
+#section3 p {
+    padding-left: 12px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Testimonial container */
+.testimonial-container {
+    display: flex;
+    justify-content: space-between; /* Distribute the testimonials evenly */
+    gap: 15px; /* Space between columns */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+/* Testimonial box styling */
+.testimonial {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 12px;
+    max-width: 30%;
+    max-height: 460px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px); /* Slightly raise the testimonial on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-name {
+    font-size: 28px !important;
+    text-align: center !important;
+    font-weight: bold;
+    color: #1e90ff;
+    margin-bottom: 10px;
+
+    /* Enhancements */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* soft shadow */
+    letter-spacing: 1.5px; /* more spacing between letters */
+    padding-bottom: 10px;
+    border-bottom: 2px solid #1e90ff; /* optional underline */
+    display: inline-block;
+}
+
+
+
+
+
+
+/* Testimonial content styling */
+.testimonial-content {
+padding:8px;
+  font-weight: 100 !important;
+  letter-spacing:0.5px;
+    font-size: 16px;
+        color: black !important;
+    line-height: 1.6;
+}
 
 
 
@@ -251,11 +339,25 @@ border-top:0.2px solid white;
 
 
     nav ul li a {
-        color: white;
+        color: black;
         text-decoration: none;
         transition: color 0.3s ease;
         font-size:18px !important;
     }
+    nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+    .testimonial-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .testimonial {
+        max-width: 100%;
+    }
+
 
 
 
@@ -293,7 +395,7 @@ border-top:0.2px solid white;
     animation: slideInFromBottom 1.2s ease-out;
         font-size: 18px !important;
     text-align: justify !important;
-    color: white;
+    color: black;
     padding: 0 15px;
 
 }
