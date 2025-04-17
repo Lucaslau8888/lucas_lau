@@ -10,18 +10,28 @@
 <body>
 
     <!-- Navbar (this will be dynamically loaded) -->
-    <div id="navbar"></div>
+    <div id="navbar">
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Resume</a></li>
+                <li><a href="index.html">Project</a></li>
+                <li><a href="contact_us.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <h1>Contact Us</h1>
     <p>If you have any questions, feel free to reach out to us.</p>
 
-    <script>
-        // Load navbar dynamically from the includes folder
-        fetch('includes/navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar').innerHTML = data;
-            });
-    </script>
+<!--    <script>-->
+<!--        // Load navbar dynamically from the includes folder-->
+<!--        fetch('includes/navbar.html')-->
+<!--            .then(response => response.text())-->
+<!--            .then(data => {-->
+<!--                document.getElementById('navbar').innerHTML = data;-->
+<!--            });-->
+<!--    </script>-->
 </body>
 </html>

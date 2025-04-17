@@ -10,47 +10,98 @@
 <body>
 
     <!-- Navbar (this will be dynamically loaded) -->
-    <div id="navbar"></div>
+    <div id="navbar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Resume</a></li>
+                <li><a href="index.html">Project</a></li>
+                <li><a href="contact_us.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
 
 <div id="home" class="container">
             <h1 style="">Lucas Lau's Portfolio</h1>
 
-    <div id="sec1">
-    <div class="image-section">
+    <div id="sec1" >
+    <div class="image-section1">
         <img src="img/me.jpg" id="me" alt="My Image">
     </div>
     <div class="text-section">
         <p style="font-weight:bold !important; font-size:24px !important;">A Bit About Me</p>
-        <p>I am a responsible and motivated individual who is always keen to expand my skill set and
-            gain new experiences. Moreover, I am adept at getting across to people and adapting to
-            changes with ease. I also believe that good interpersonal skills and working well in a team
-            are crucial in broadening one's horizon. Furthermore, I am well-organized and always plan ahead
-            to manage my time well. Taking the initiative to solve problems without being asked has always been
-            my strength.
-        </p>
-        <p>
-            In addition to my core strengths, I have developed a strong interest in programming and technology.
-            The languages I focus on include Node.js for backend development, Jinja for templating in Python-based
-            applications, HTML and CSS for building web interfaces, and JavaScript for creating interactive and dynamic
-            content. Additionally, I have explored basic networking, which has given me a solid foundation in understanding
-            how devices and networks communicate.
+  <p>
+    I am a responsible and motivated individual who is always keen to expand my skill set and
+    gain new experiences. Moreover, I am adept at getting across to people and adapting to
+    changes with ease. I also believe that good interpersonal skills and working well in a team
+    are crucial in broadening one's horizon. Furthermore, I am well-organized and always plan ahead
+    to manage my time well. Taking the initiative to solve problems without being asked has always been
+    my strength.
 </p>
-        <p>
-            I am always eager to learn more and apply my knowledge in real-world projects, while also growing as a versatile
-            and adaptive problem solver.
 
+<p>
+    In addition to my core strengths, I have developed a strong interest in programming and technology.
+    The languages I focus on include <b><u>Node.js</u></b> for backend development, <b><u>Jinja</u></b> for templating in Python-based
+    applications, <b><u>HTML</u></b> and <b><u>CSS</u></b> for building web interfaces, and <b><u>JavaScript</u></b> for creating interactive and dynamic
+    content. I also place great importance on <b><u>UX design</u></b> to ensure that websites are user-friendly, visually appealing,
+    and intuitive to navigate. Additionally, I have explored basic <b><u>networking</u></b>, which has given me a solid foundation in understanding
+    how devices and networks communicate.
+</p>
+
+<p>
+    I am always eager to learn more and apply my knowledge in real-world projects, while also growing as a versatile
+    and adaptive problem solver.
 </p>
     </div>
         </div>
+
+
+    <div id="sec2">
+                <p style="font-weight:bold !important; font-size:28px !important; padding-left:12px;">My Skills</p>
+
+            <div class="skills-grid">
+        <div class="skill-item">
+            <img src="./img/html.png" alt="HTML">
+            <p>HTML</p>
+        </div>
+        <div class="skill-item">
+            <img src="./img/css.png" alt="CSS">
+            <p>CSS</p>
+        </div>
+        <div class="skill-item">
+            <img src="./img/js.png" alt="JavaScript" style=" width: 100px; height: 100px;">
+            <p>JavaScript</p>
+        </div>
+<!--        <div class="skill-item">-->
+<!--            <img src="./img/css.png" alt="CSS">-->
+<!--            <p>FSDP</p>-->
+<!--        </div>-->
+        <div class="skill-item">
+            <img src="./img/ux.png" alt="UX Design">
+            <p>UX Design</p>
+        </div>
+        <div class="skill-item">
+            <img src="./img/csharp.png" alt="C#">
+            <p>C#</p>
+        </div>
+        <div class="skill-item">
+            <img src="./img/python.png" alt="Python">
+            <p>Python</p>
+        </div>
+    </div>
+
+
+    </div>
 </div>
 
         <script>
-        // Load navbar dynamically from the includes folder
-        fetch('./includes/navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar').innerHTML = data;
-            });
+<!--        // Load navbar dynamically from the includes folder-->
+<!--        fetch('./includes/navbar.html')-->
+<!--            .then(response => response.text())-->
+<!--            .then(data => {-->
+<!--                document.getElementById('navbar').innerHTML = data;-->
+<!--            });-->
     </script>
 
 </body>

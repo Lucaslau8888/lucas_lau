@@ -34,9 +34,11 @@ nav {
     align-items: center; /* Vertically center the content */
 }
 
-.image-section {
+.image-section1 {
 padding-left:80px;
-    flex:0.5; /* Fixed size for the image */
+    flex:0.5;
+            justify-content: center;
+
 }
 /* Text section style */
 .text-section {
@@ -72,6 +74,15 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    transition: color 0.3s ease;
+    font-size:20px !important;
+
+
+}
+
+nav ul li a:hover {
+    color: #1e90ff; /* Light cyan color on hover */
+
 }
 
 h1 {
@@ -84,6 +95,51 @@ p {
          text-align: justify !important;
 /* Set paragraph color to black */
 }
+
+
+#sec2{
+padding:18px 10px 10px 10px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 150px;
+    padding: 18px;
+    text-align: center;
+}
+
+.skill-item {
+    width: 100px;
+    color: white;
+        flex-direction: column;
+    align-items: center; /* centers both image and text */
+    text-align: center;
+}
+
+.skill-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.skill-item img:hover {
+    transform: scale(1.1);
+}
+
+.skill-item p {
+    font-size: 16px;
+    margin: 0;
+        text-align: center !important;
+
+}
+
+
+
+
 
 
 
@@ -100,7 +156,7 @@ p {
         text-align: center;
 
 }
-    .image-section {
+    .image-section1 {
         padding-left: 0;
         margin-bottom: 20px;
         justify-content: center;
@@ -125,6 +181,18 @@ p {
         font-size: 18px !important;
         text-align: justify !important;
     }
+
+
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        font-size:18px !important;
+    }
+
+
+
 }
 
 /* Adding keyframe animations */
@@ -153,13 +221,14 @@ p {
     animation: slideInFromBottom 1.2s ease-out;
 }
 
+
 /* Apply the slide-in effect to the text section */
 .text-section {
     animation: slideInFromBottom 1.2s ease-out;
         font-size: 18px !important;
     text-align: justify !important;
     color: white;
-    padding: 0 15px;  
+    padding: 0 15px;
 
 }
 
