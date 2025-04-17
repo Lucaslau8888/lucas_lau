@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucas Lau</title>
-<!--     <link rel="stylesheet" href="./css/style1.css"> -->
         <link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
 <body>
@@ -60,9 +60,9 @@
 
 
     <div id="sec2">
-                <p style="font-weight:bold !important; font-size:28px !important; padding-left:12px;">My Skills</p>
+                <p style="font-weight:bold !important; font-size:28px !important; padding-left:12px;">Core Strengths</p>
 
-            <div class="skills-grid">
+       <div class="skills-grid">
         <div class="skill-item">
             <img src="./img/html.png" alt="HTML">
             <p>HTML</p>
@@ -93,18 +93,30 @@
         </div>
     </div>
 
+    </div>
+
+
+    <div id="section3">
+                <p style="font-weight:bold !important; font-size:28px !important; padding-left:12px;">Testimonial</p>
+
 
     </div>
-</div>
 
-        <script>
-<!--        // Load navbar dynamically from the includes folder-->
-<!--        fetch('./includes/navbar.html')-->
-<!--            .then(response => response.text())-->
-<!--            .then(data => {-->
-<!--                document.getElementById('navbar').innerHTML = data;-->
-<!--            });-->
+
+
+    <div id="footer"></div>
+
+
+
+    <script>
+        // Load footer dynamically
+        fetch('./includes/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
     </script>
+
 
 </body>
 </html>
