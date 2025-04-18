@@ -425,5 +425,79 @@ padding:8px;
     font-size: 16px;
     line-height: 1.6;
 }
-/* You can control animation timing with delay, iteration count, etc., if needed */
 
+
+
+
+  .container1 {
+      margin: auto;
+    }
+
+    .text-section1 p {
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .resume-row {
+      display: grid;
+      grid-template-columns: 0.8fr 0.5fr 2fr; /* Adjusted column sizes */
+      gap: 20px;
+      border-bottom:1px solid #D3D3D3;
+      padding-bottom:12px;
+      width: 100%;
+      align-items: center;
+  justify-content: center;
+
+    }
+
+
+    .left-column img {
+      width: 100%;
+      padding:12px;
+      max-width: 280px;
+      object-fit: contain;
+
+      height: 250px;
+      border-radius: 12px;
+    }
+
+    .center-column .period {
+      font-style: italic;
+      color: #444;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    .right-column .desc {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+  .resume-row {
+        background-color: transparent !important;
+    grid-template-columns: 1fr;
+  }
+
+  .left-column,
+  .center-column,
+  .right-column {
+    display: flex;
+    flex-direction: column;
+    padding:12px;
+    align-items: center;
+  }
+
+  .left-column img {
+    margin: auto;
+  }
+
+  .center-column .period {
+    margin-top: -30px;
+  }
+
+  .right-column {
+  margin-top: -30px;
+}
+    }

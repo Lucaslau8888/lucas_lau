@@ -1,54 +1,96 @@
-<!-- contact_us.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/style1.css">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+  </style>
 </head>
 <body>
 
-    <div id="navbar">
-        <nav>
-            <ul>
-                <li><a href="index.html" >Lucas Lau</a></li>
-                <li><a href="resume.html" style="color: #1e90ff;">Resume</a></li>
-                <li><a href="index.html">Project</a></li>
-                <li><a href="contact_us.html">Contact</a></li>
-            </ul>
+  <div id="navbar">
+    <nav>
+      <ul>
+        <li><a href="index.html">Lucas Lau</a></li>
+        <li><a href="resume.html" style="color: #1e90ff;">Resume</a></li>
+        <li><a href="index.html">Project</a></li>
+        <li><a href="contact_us.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 
-        </nav>
-    </div>
+  <div id="home" class="container1">
+    <div class="text-section1">
+        <p style="font-weight:bold !important; font-size:38px !important;">Resume</p>
+      <p style="margin-top: -10px; font-size: 26px !important;">Work Experience</p>
 
-<div id="home" class="container">
-        <div class="text-section1">
-                    <p style="font-weight:bold !important; font-size:24px !important;">Resume</p>
 
+            <!-- Work Experience 1 -->
+      <div class="resume-row" style="background-color:#eeeeee; ">
+        <div class="left-column">
+          <img src="./img/mindlink.png" alt="Company Image">
         </div>
+        <div class="center-column">
+          <div class="period">Jan 2024 - Apr 2024</div>
+        </div>
+        <div class="right-column" style="padding:12px;">
+                    <h3>Mindlink Groups pte ltd</h3>
 
-</div>
+          <div class="desc">
+During my three-month internship at Ming Yan Company, I focused on improving the company’s website, which was built using the Odoo platform. I contributed to enhancing existing features and optimizing the overall user experience. One of the key features I developed was the Agent Management module, which allows the company to manage staff information efficiently. Additionally, I created the E-Submit function, enabling users to submit documents and automatically generate e-receipts. These enhancements significantly improved the effectiveness and efficiency of the company’s internal processes.
 
-
-
-
-<div id="footer"></div>
-
-
-
-    <script>
-        // Load footer dynamically
-        fetch('./includes/footer_menu.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-            });
-    </script>
+          </div>
+        </div>
+      </div>
 
 
+      <!-- Work Experience 2 -->
+      <div class="resume-row"  >
+        <div class="left-column">
+          <img src="./img/challenger.png" alt="Company Image">
+        </div>
+        <div class="center-column">
+          <div class="period">Jan 2022 – Dec 2022</div>
+        </div>
+        <div class="right-column" style="padding:12px;">
+          <h3>Challenger pte ltd</h3>
+          <div class="desc">
+Working at Challenger has allowed me to gain many new experiences and knowledge that was not taught in school. Hands-on experiences such as troubleshooting and basic configuration of devices have enabled me to deepen my understanding and further build on the foundation of what I have learned in school. Other than these hard skills, I also acquired soft skills such as communication through customer support throughout my days working at Challenger.          </div>
+        </div>
+      </div>
+
+      <!-- Work Experience 3 -->
+      <div class="resume-row" style="background-color:#eeeeee; ">
+        <div class="left-column">
+          <img src="./img/mingyan.png" alt="Company Image">
+        </div>
+        <div class="center-column">
+          <div class="period">Jan 2020 - Dec 2020</div>
+        </div>
+        <div class="right-column" style="padding:12px;">
+                    <h3>Ming Yan pte ltd</h3>
+
+          <div class="desc">
+During my internship days in Ming Yan company, I was able to carry out and perform basic configuration on server and router and basic network and server installation based on the knowledge I have learned in school. These hands on experiences have ultimately deepened my knowledge and sharpened my skills.          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch('./includes/footer_menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
 
 </body>
 </html>
