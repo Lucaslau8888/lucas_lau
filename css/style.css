@@ -538,7 +538,7 @@ padding:14px;
 
     .resume-row-edu {
         background-color: transparent !important;
-          grid-template-columns:0fr 0.5fr 1fr;
+          grid-template-columns:0fr 1.2fr 2fr;
 
   }
 
