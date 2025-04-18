@@ -18,6 +18,14 @@ body {
     }
 
 
+   #title2 {
+      font-size: 60px;
+      color: #3a7ca5; /* calm bold blue */
+      text-shadow:
+        2px 2px #ffffff,
+        4px 4px #a4cbe3; /* soft light blue shadow */
+    }
+
 
 
 #home{
@@ -378,7 +386,7 @@ padding:8px;
 }
 
 /* Apply the fade-in to the header */
-#home h1 {
+#home #title1 {
     animation: slideInFromBottom 1.2s ease-out;
 }
 
@@ -442,7 +450,6 @@ padding:8px;
       display: grid;
       grid-template-columns: 0.8fr 0.5fr 2fr; /* Adjusted column sizes */
       gap: 20px;
-      border-bottom:1px solid #D3D3D3;
       padding-top:12px;
       padding-bottom:12px;
       width: 100%;
@@ -467,7 +474,8 @@ margin-bottom:-18px;
       grid-template-columns: 0.8fr 3fr 0.1fr; /* Adjusted column sizes */
       gap: 20px;
       width: 100%;
-      padding-bottom:50px;
+      padding-bottom:40px;
+
       align-items: center;
   justify-content: center;
 
@@ -486,12 +494,12 @@ margin-bottom:-18px;
 
 
     .left-column img {
-      width: 100%;
+      width: 80%;
       padding:12px;
       max-width: 280px;
       object-fit: contain;
 
-      height: 250px;
+      height: 240px;
       border-radius: 12px;
     }
 
@@ -503,7 +511,7 @@ margin-bottom:-18px;
     }
 
     .desc {
-      font-size: 15px;
+      font-size: 16px;
       color: #333;
       line-height: 1.6;
     }
@@ -525,7 +533,8 @@ padding:14px;
   .resume-row {
         background-color: transparent !important;
     grid-template-columns: 1fr;
-  }
+ border-bottom:1px solid #D3D3D3;
+   }
 
     .resume-row-edu {
         background-color: transparent !important;
@@ -533,9 +542,13 @@ padding:14px;
 
   }
 
+  .skill-mobile{
+  background-color:white;
+  }
+
       .resume-row-skill {
         background-color: transparent !important;
-          grid-template-columns:0.02fr 3fr 0fr;
+          grid-template-columns:0fr 4fr ;
 
   }
 
@@ -549,8 +562,14 @@ font-size:12px !important;
 
 
       .resume-row-skill .center-column .desc ul li{
-font-size:14px !important;
+font-size:16px ;
   text-align: left;
+  }
+
+  .sub-skill
+  {
+        font-size: 14px;
+
   }
 
 .section-title{
