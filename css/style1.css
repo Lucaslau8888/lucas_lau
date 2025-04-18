@@ -484,7 +484,7 @@ margin-bottom:-18px;
 
     .sub-skill {
   font-weight: normal !important;
-      font-size: 16px !important;
+      font-size: 18px !important;
   color: #444;
   margin-top: 4px;
   padding-bottom: 14px;
@@ -512,8 +512,10 @@ margin-bottom:-18px;
     }
 
     .desc {
-      font-size: 16px;
-      color: #333;
+      font-size: 18px;
+        flex: 1.1 !important;
+      line-height: 1.6 !important;
+      color: black !important;
       line-height: 1.6;
     }
 
@@ -549,7 +551,7 @@ padding:14px;
 
       .resume-row-skill {
         background-color: transparent !important;
-          grid-template-columns:0fr 4fr ;
+          grid-template-columns:1fr ;
 
   }
 
@@ -563,13 +565,13 @@ font-size:12px !important;
 
 
       .resume-row-skill .center-column .desc ul li{
-font-size:16px ;
+font-size:18px !important;
   text-align: left;
   }
 
   .sub-skill
   {
-        font-size: 14px;
+        font-size: 18px;
 
   }
 
