@@ -443,6 +443,7 @@ padding:8px;
       grid-template-columns: 0.8fr 0.5fr 2fr; /* Adjusted column sizes */
       gap: 20px;
       border-bottom:1px solid #D3D3D3;
+      padding-top:12px;
       padding-bottom:12px;
       width: 100%;
       align-items: center;
