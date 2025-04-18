@@ -450,6 +450,16 @@ padding:8px;
 
     }
 
+        .resume-row-edu {
+      display: grid;
+      grid-template-columns: 0.8fr 0.5fr 2fr; /* Adjusted column sizes */
+      gap: 20px;
+      width: 100%;
+      align-items: center;
+  justify-content: center;
+
+    }
+
 
     .left-column img {
       width: 100%;
@@ -480,6 +490,27 @@ padding:8px;
     grid-template-columns: 1fr;
   }
 
+    .resume-row-edu {
+        background-color: transparent !important;
+          grid-template-columns:0fr 0.5fr 1fr;
+
+  }
+
+    .resume-row-edu .right-column .desc {
+font-size:12px !important;
+  text-align: left;
+  margin-top:-45px;
+  padding-bottom:12px;
+
+  }
+
+      .resume-row-edu .center-column .period {
+font-size:14px !important;
+  text-align: left;
+
+  }
+
+.left-column1,
   .left-column,
   .center-column,
   .right-column {
