@@ -449,8 +449,8 @@ padding:8px;
 
     .resume-row {
       display: grid;
-      grid-template-columns: 0.8fr 0.5fr 2fr; /* Adjusted column sizes */
-      gap: 20px;
+      grid-template-columns: 0.7fr 0.5fr 2fr; /* Adjusted column sizes */
+      gap: 10px;
       padding-top:12px;
       padding-bottom:12px;
       width: 100%;
