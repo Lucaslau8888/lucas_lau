@@ -459,6 +459,17 @@ padding:8px;
 
     }
 
+.resume-row-project {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2 parts content, 1 part image/message */
+    gap: 20px;
+    padding-bottom:80px;
+    margin-top: 20px;
+    align-items: start;
+          align-items: center;
+  justify-content: center;
+}
+
         .resume-row-edu {
       display: grid;
       grid-template-columns: 0.8fr 0.5fr 2fr; /* Adjusted column sizes */
@@ -504,6 +515,26 @@ margin-bottom:-18px;
       border-radius: 12px;
     }
 
+
+
+    .right-column-project img{
+       width: 80%;
+      padding:1px;
+      max-width: 500px;
+            height: 250px;
+
+      object-fit: fill;
+      border-radius: 12px;
+    }
+
+.left-column-projects {
+  text-align: left;
+  margin-top:-25px;
+  padding-bottom:12px;
+  padding-left:12px;
+}
+
+
     .center-column .period {
       font-style: italic;
       color: #444;
@@ -512,7 +543,7 @@ margin-bottom:-18px;
     }
 
     .desc {
-      font-size: 18px;
+      font-size: 17px;
         flex: 1.1 !important;
       line-height: 1.6 !important;
       color: black !important;
@@ -535,6 +566,16 @@ padding:14px;
     @media (max-width: 768px) {
   .resume-row {
         background-color: transparent !important;
+    grid-template-columns: 1fr;
+ border-bottom:1px solid #D3D3D3;
+   }
+
+     .resume-row-project {
+        background-color: transparent !important;
+            flex-direction: column-reverse;
+    display: flex;
+
+        padding-bottom:15px;
     grid-template-columns: 1fr;
  border-bottom:1px solid #D3D3D3;
    }
@@ -563,6 +604,25 @@ font-size:12px !important;
 
   }
 
+  .resume-row-project .left-column-projects .desc {
+  font-size:12px !important;
+  text-align: justify;  /* <== this justifies the text */
+  padding-bottom:18px;
+  }
+
+    .right-column-project img{
+       width: 80%;
+      padding:1px;
+      max-width: 300px;
+            height: 200px;
+
+      object-fit: fill;
+
+
+border:1px solid black;
+      border-radius: 12px;
+    }
+
 
       .resume-row-skill .center-column .desc ul li{
 font-size:18px !important;
@@ -584,7 +644,8 @@ font-size:14px !important;
   text-align: left;
 
   }
-
+.left-column-projects,
+.right-column-project,
 .left-column1,
   .left-column,
   .center-column,
@@ -593,9 +654,14 @@ font-size:14px !important;
     flex-direction: column;
     padding:12px;
     align-items: center;
+
   }
 
   .left-column img {
+    margin: auto;
+  }
+
+  .right-column-project img {
     margin: auto;
   }
 
@@ -604,6 +670,10 @@ font-size:14px !important;
   }
 
   .right-column {
+  margin-top: -30px;
+}
+
+  .left-column-projects {
   margin-top: -30px;
 }
     }

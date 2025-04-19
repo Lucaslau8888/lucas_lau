@@ -1,0 +1,120 @@
+<!-- contact_us.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="css/style2.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+    <div id="navbar">
+        <nav>
+            <ul>
+                <li><a href="index.html" >Lucas Lau</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html" style="color: #1e90ff;">Project</a></li>
+<!--                <li><a href="contact_us.html" style="color: #1e90ff;">Contact</a></li>-->
+            </ul>
+
+        </nav>
+    </div>
+
+  <div id="home" class="container1" style="margin-left:-7.2px;">
+
+       <div class="text-section1">
+<!--        <p style=" font-weight:bold !important; padding-bottom:8px; font-size:38px !important; letter-spacing:1.5px;">Resume</p>-->
+
+            <h1 id="title2">Projects</h1>
+
+  <div >
+
+
+            <!-- project 1 -->
+      <div class="resume-row-project" >
+        <div class="left-column-projects">
+            <h2>Packet tracer project</h2>
+
+          <div class="desc">
+This project was created during my higher Nitec years, the main purpose of this project was to focus on implementing VPNs and firewalls, preventing cyber attacks, providing confidentiality by establishing a secure connection, monitoring the incoming packets and blocking unauthorized access. My role in this project was to install and configure the Firewall and router.
+<br><br>
+One challenge I encountered during this project was that after the configuration of the firewall and router, the network traffic slowed down considerably, resulting in a delay in the process of data transfer.
+
+              <br><br>As this was my first time encountering this problem and the school had not yet taught us ways to solve this type of problem, I had to discuss it with my project mates and research online to find the root cause of the problem and solutions to address it. It was not easy to find the root cause of the issue but due to my group's teamwork as well as my perseverance, I was able to solve the problem which lead to the router running smoothly. Overall, this project has allowed me to gain more insight into how the network data exchanges and interacts.
+          </div>
+        </div>
+        <div class="right-column-project" style="padding:12px;">
+          <img src="./img/project1.jpg" alt="Company Image">
+
+        </div>
+
+
+      </div>
+
+
+                  <!-- project 1 -->
+      <div class="resume-row-project" >
+        <div class="left-column-projects">
+            <h2>Window OS hardening</h2>
+
+          <div class="desc">
+This project was created during my higher Nitec years. It focuses on how to increase the security level of end devices and provide reliable connection within a network by using a firewall, antivirus software and setting configuration. High-level security plays a vital role in the industry as it can prevent unauthorized access as well as cyber-attacks. My role in this project was to configure end devices for companies to enhance their network security.
+
+<br><br>
+
+However, there are various types of end devices and all of them possess different specifications. It was challenging to configure different types of end devices as I needed to be meticulous in the configuring their settings. This was important as configuring the settings wrongly could result in lag. I was able to overcome this challenge by memorizing the different requirements for end devices specifications as well as exposing myself to the various types of end devices. Overall, the project was successful due to the persistent effort I put in to overcome the challenge.
+          </div>
+        </div>
+        <div class="right-column-project" style="padding:12px;">
+          <img src="./img/project2.jpg" alt="Company Image">
+
+        </div>
+      </div>
+
+
+
+
+                  <!-- project 3 -->
+<!--      <div class="resume-row-project" >-->
+<!--        <div class="left-column-projects">-->
+<!--            <h2>Packet tracer project</h2>-->
+
+<!--          <div class="desc">-->
+<!--This project was created during my higher Nitec years, the main purpose of this project was to focus on implementing VPNs and firewalls, preventing cyber attacks, providing confidentiality by establishing a secure connection, monitoring the incoming packets and blocking unauthorized access. My role in this project was to install and configure the Firewall and router.-->
+<!--<br><br>-->
+<!--One challenge I encountered during this project was that after the configuration of the firewall and router, the network traffic slowed down considerably, resulting in a delay in the process of data transfer.-->
+
+<!--              <br><br>As this was my first time encountering this problem and the school had not yet taught us ways to solve this type of problem, I had to discuss it with my project mates and research online to find the root cause of the problem and solutions to address it. It was not easy to find the root cause of the issue but due to my group's teamwork as well as my perseverance, I was able to solve the problem which lead to the router running smoothly. Overall, this project has allowed me to gain more insight into how the network data exchanges and interacts.-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="right-column-project" style="padding:12px;">-->
+<!--          <img src="./img/project1.jpg" alt="Company Image">-->
+<!--        </div>-->
+<!--      </div>-->
+
+
+  </div>
+  </div>
+
+
+
+<div id="footer"></div>
+
+
+
+    <script>
+        // Load footer dynamically
+        fetch('./includes/footer_menu.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+
+
+
+</body>
+</html>
