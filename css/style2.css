@@ -693,3 +693,96 @@ font-size:14px !important;
     .container1 {
       animation: fadeIn 1s ease-in-out;
     }
+
+
+
+/* Main section styling */
+.more-projects-section {
+  background: #e0f7fa;  /* Light blue with a soft touch */
+  color: #333;
+  text-align: center;
+  padding: 60px 20px;
+  margin-top: 40px;
+  border-radius: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(100px); /* initial position for animation */
+  opacity: 0; /* initial opacity for animation */
+  animation: slideUp 1s ease-out forwards; /* Sliding animation */
+}
+
+/* Icon styling */
+.more-projects-section .icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: #00796b;
+  animation: fadeIn 1.2s ease-out 0.2s forwards;
+}
+
+/* Title styling */
+.more-projects-section .section-title {
+  font-size: 32px;
+  margin-bottom: 12px;
+  color: #00796b;
+  animation: fadeIn 1.2s ease-out 0.4s forwards;
+}
+
+/* Paragraph styling */
+.more-projects-section .section-description {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  animation: fadeIn 1.2s ease-out 0.6s forwards;
+}
+
+/* Hover effects */
+.more-projects-section .icon:hover {
+  transform: rotate(20deg); /* Fun hover effect on icon */
+  transition: all 0.3s ease;
+}
+
+.more-projects-section .section-title:hover {
+  color: #004d40; /* Slight color change on hover */
+  transition: all 0.3s ease;
+}
+
+/* Slide-up animation */
+@keyframes slideUp {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  /* Ensure the sections adapt better without forcing the styles */
+  .more-projects-section .icon {
+    font-size: 40px; /* Smaller icon for mobile */
+  }
+
+  .more-projects-section .section-title {
+    font-size: 26px; /* Adjust title font size for mobile */
+  }
+
+  .more-projects-section .section-description {
+    font-size: 14px !important; /* Adjust paragraph size */
+  }
+}
+
