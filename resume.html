@@ -9,56 +9,40 @@
     <link rel="icon" type="image/png" href="./img/logo.png">
 
   <style>
-/* General styling for the page */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-}
+    .timeline-container {
+      position: relative;
+      margin-left: 40px; /* More space between line and text */
+      border-left: 3px solid #1e90ff;
+      padding-left: 40px; /* Space between line and content */
+    }
 
-/* Timeline container - centered */
-.timeline {
-    position: relative;
-    width: 70%; /* Adjust to your desired width */
-    max-width: 1200px; /* Optional max width for larger screens */
-    margin: 0 auto; /* Centers the timeline horizontally */
-    padding: 20px 0;
-    border-left: 2px solid #007bff;
-}
+    .timeline-item {
+      position: relative;
+      margin-bottom: 40px;
+    }
 
-/* Timeline items */
-.timeline-item {
-    display: flex;
-    align-items: center;
-    position: relative;
-    padding-left: 30px;
-    margin-bottom: 20px;
-}
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -53px; /* Move bullet far left */
+      top: 0;
+      width: 16px;
+      height: 16px;
+      background-color: #1e90ff;
+      border: 3px solid white;
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px #1e90ff;
+    }
 
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -6px; /* Adjust to shift the bullet to the left */
-    top: 0;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #007bff;
-}
+    .timeline-date {
+      font-weight: bold;
+      color: #1e90ff;
+    }
 
-/* Date part of the timeline */
-.timeline-date {
-    font-weight: bold;
-    color: #333;
-    margin-right: 20px;
-}
-
-/* Content part of the timeline */
-.timeline-content {
-    padding-left: 10px;
-
-}
+    .timeline-content {
+      font-size: 16px;
+      color: #333;
+    }
 
 /* Optional responsive styling for smaller screens */
 @media screen and (max-width: 768px) {
