@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="./img/logo.png">
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+
+    <style>
+      .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(50vh - 60px); /* Adjust based on navbar/footer height */
+        padding-top: 30px;
+        padding-bottom: 20px;
+      }
+
+      .login-box {
+        background: white;
+        padding: 30px 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .login-box h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+      }
+
+      .input-group {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+      }
+
+      .input-group i {
+        padding: 10px;
+        background: #1e90ff;
+        color: white;
+        min-width: 40px;
+        text-align: center;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
+
+      .input-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid grey;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        outline: none;
+      }
+
+      .login-box button {
+        width: 100%;
+        padding: 12px;
+        background-color: #1e90ff;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .login-box button:hover {
+        background-color: #187bcd;
+      }
+
+      .login-box .links {
+        margin-top: 15px;
+        text-align: center;
+      }
+
+      .login-box .links a {
+        color: #1e90ff;
+        text-decoration: none;
+      }
+
+      .login-box .links a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 600px) {
+        .login-container {
+          height: auto;
+          padding: 60px 20px;
+        }
+
+        .login-box {
+          padding: 30px 20px;
+          box-shadow: none;
+        }
+
+        .input-group i {
+          padding: 12px 8px;
+          font-size: 14px;
+          min-width: 35px;
+        }
+
+        .input-group input {
+          font-size: 14px;
+        }
+
+        .login-box button {
+          font-size: 14px;
+          padding: 10px;
+        }
+      }
+    </style>
+
+</head>
+<body>
+
+  <div id="navbar">
+    <nav style="display: flex; justify-content: space-between; align-items: center;">
+      <ul style="display: flex; gap: 20px; list-style-type: none; margin: 0; padding: 0;">
+        <li><a href="index.html">Lucas Lau</a></li>
+        <li><a href="resume.html" >Resume</a></li>
+        <li><a href="projects.html">Project</a></li>
+      </ul>
+      <ul style="list-style-type: none; margin: 0; padding: 0;">
+        <li><a href="login.html" style="color: #1e90ff;">Login</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="home" class="container1" style="margin-left:-7.2px;">
+    <div class="login-container">
+      <div class="login-box">
+        <h2>Login</h2>
+        <form id="login-form">
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="email" id="username" placeholder="Email" required />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="password" placeholder="Password" required />
+          </div>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBwDOhKFxSJRIyfRE_0NjTnxaVqmclrmLU",
+    authDomain: "lucas-porfolio-30978.firebaseapp.com",
+    projectId: "lucas-porfolio-30978",
+    storageBucket: "lucas-porfolio-30978.firebasestorage.app",
+    messagingSenderId: "830005059064",
+    appId: "1:830005059064:web:25b037684a1f7b828b4a0d",
+    measurementId: "G-L6L9SCEKYE"
+  };
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth();
+
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from submitting normally
+
+      const email = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          // User signed in successfully
+          const user = userCredential.user;
+          console.log('User signed in:', user);
+
+          // Redirect to index.html after successful login
+          window.location.href = 'index.html'; // This will redirect the user to index.html
+        })
+        .catch((error) => {
+          // Handle errors
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.error('Error signing in:', errorCode, errorMessage);
+          alert('Error: ' + 'wrong password and id'); // Display the error to the user
+        });
+    });
+  </script>
+
+  <script>
+    // Scroll to top after everything is fully loaded
+    window.addEventListener('load', function () {
+      // Force scroll to the top using both body and document
+      setTimeout(function () {
+        // Scroll to top in case of page reload
+        document.documentElement.scrollTop = 0; // For most browsers
+        document.body.scrollTop = 0;            // For Safari
+      }, 10);
+    });
+
+    // Load footer dynamically
+    fetch('./includes/footer_menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>
