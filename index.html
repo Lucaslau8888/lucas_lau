@@ -9,6 +9,8 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 <link rel="icon" type="image/png" href="./img/logo.png">
 
 </head>
@@ -67,10 +69,10 @@
                 <p style="font-weight:bold !important; font-size:28px !important; padding-left:12px;">Core Strengths</p>
 
        <div class="skills-grid">
-        <div class="skill-item">
-            <img src="./img/html.png" alt="HTML">
-            <p>HTML</p>
-        </div>
+<div class="skill-item" data-aos="fade-up" data-aos-delay="100">
+    <img src="./img/html.png" alt="HTML">
+    <p>HTML</p>
+</div>
         <div class="skill-item">
             <img src="./img/css.png" alt="CSS">
             <p>CSS</p>
@@ -129,12 +131,14 @@ Teacher</p>
 
 
 
+<!-- AOS JavaScript -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
+    AOS.init(); // Initialize AOS animations
+
     // Scroll to top after everything is fully loaded
     window.addEventListener('load', function () {
-        // Force scroll to the top using both body and document
         setTimeout(function () {
-            // Scroll to top in case of page reload
             document.documentElement.scrollTop = 0; // For most browsers
             document.body.scrollTop = 0;            // For Safari
         }, 10);
@@ -147,6 +151,7 @@ Teacher</p>
             document.getElementById('footer').innerHTML = data;
         });
 </script>
+
 
 
 
