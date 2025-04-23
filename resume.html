@@ -9,24 +9,11 @@
     <link rel="icon" type="image/png" href="./img/logo.png">
 
   <style>
-   .timeline {
-      padding: 40px 20px;
-      background: #fff;
-    }
-
-    .timeline h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 2rem;
-      color: #333;
-    }
-
-    .timeline-container {
+   .timeline-container {
       position: relative;
-      margin: 0 auto;
-      max-width: 600px;
-      padding-left: 30px;
+      margin-left: 40px; /* More space between line and text */
       border-left: 3px solid #1e90ff;
+      padding-left: 40px; /* Space between line and content */
     }
 
     .timeline-item {
@@ -37,12 +24,12 @@
     .timeline-item::before {
       content: "";
       position: absolute;
-      left: -11px;
-      top: 5px;
-      width: 20px;
-      height: 20px;
+      left: -53px; /* Move bullet far left */
+      top: 0;
+      width: 16px;
+      height: 16px;
       background-color: #1e90ff;
-      border: 3px solid #fff;
+      border: 3px solid white;
       border-radius: 50%;
       box-shadow: 0 0 0 2px #1e90ff;
     }
@@ -50,19 +37,11 @@
     .timeline-date {
       font-weight: bold;
       color: #1e90ff;
-      margin-bottom: 8px;
-      font-size: 1rem;
     }
 
-    .timeline-content h3 {
-      margin: 5px 0;
-      font-size: 1.1rem;
+    .timeline-content {
+      font-size: 16px;
       color: #333;
-    }
-
-    .timeline-content p {
-      margin: 0;
-      color: #666;
     }
 
   </style>
