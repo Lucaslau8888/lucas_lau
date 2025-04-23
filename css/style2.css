@@ -544,6 +544,7 @@ margin-bottom:-18px;
 
     .desc {
       font-size: 17px;
+        padding-bottom:12px;
         flex: 1.1 !important;
       line-height: 1.6 !important;
       color: black !important;
