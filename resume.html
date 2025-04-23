@@ -9,11 +9,16 @@
     <link rel="icon" type="image/png" href="./img/logo.png">
 
   <style>
+  .timeline-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
     .timeline-container {
       position: relative;
-      margin-left: 40px; /* More space between line and text */
       border-left: 3px solid #1e90ff;
-      padding-left: 40px; /* Space between line and content */
+      padding-left: 30px;
+      max-width: 600px;
     }
 
     .timeline-item {
@@ -24,14 +29,14 @@
     .timeline-item::before {
       content: "";
       position: absolute;
-      left: -53px; /* Move bullet far left */
+      left: -36px; /* Adjust as needed */
       top: 0;
-      width: 16px;
-      height: 16px;
+      width: 10px; /* Smaller bullet */
+      height: 10px; /* Smaller bullet */
       background-color: #1e90ff;
-      border: 3px solid white;
+      border: 2px solid white;
       border-radius: 50%;
-      box-shadow: 0 0 0 2px #1e90ff;
+      box-shadow: 0 0 0 1px #1e90ff;
     }
 
     .timeline-date {
@@ -44,24 +49,28 @@
       color: #333;
     }
 
-/* Optional responsive styling for smaller screens */
-@media screen and (max-width: 768px) {
-   .timeline {
-        width: 100%; /* Make timeline take up the full width on small screens */
-        margin: 0; /* Remove centering margin */
-        padding-left: 20px; /* Align to the left */
-        border-left: none; /* Remove vertical line */
+    /* Center on laptop/desktop */
+    @media (min-width: 768px) {
+      .timeline-wrapper {
+        justify-content: center;
+      }
     }
 
-    .timeline-item {
-        padding-left: 20px; /* Adjust padding for mobile */
-    }
+    /* Left-align on mobile */
+    @media (max-width: 767px) {
+      .timeline-wrapper {
+        justify-content: flex-start;
+      }
 
-    .timeline-item::before {
-        left: -10px; /* Move bullet to the left */
-    }
-}
+      .timeline-container {
+        margin-left: 10px;
+        padding-left: 20px;
+      }
 
+      .timeline-item::before {
+        left: -26px;
+      }
+    }
 
   </style>
 </head>
@@ -197,40 +206,26 @@ During my internship days in Ming Yan company, I was able to carry out and perfo
            <div class="section-title" style="padding-top: 20px; ">Education</p>
 
 
-<section class="timeline">
-  <div class="timeline-container">
-    <div class="timeline-item">
-      <div class="timeline-date">Apr 2022 - Apr 2025</div>
-      <div class="timeline-content">
-        <h3>Diploma in Information Technology</h3>
-        <p>Nanyang Polytechnic</p>
+  <div class="timeline-wrapper">
+    <div class="timeline-container">
+      <div class="timeline-item">
+        <div class="timeline-date">Apr 2022 - Apr 2025</div>
+        <div class="timeline-content">Diploma in Information Technology, Nanyang Polytechnic</div>
       </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-date">Apr 2021 - Mar 2022</div>
-      <div class="timeline-content">
-        <h3>Higher Nitec in IT System & Network</h3>
-        <p>ITE Central</p>
+      <div class="timeline-item">
+        <div class="timeline-date">Apr 2021 - Mar 2022</div>
+        <div class="timeline-content">Higher Nitec in IT System and Network, ITE Central</div>
       </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-date">Jan 2019 - Jan 2021</div>
-      <div class="timeline-content">
-        <h3>Nitec in Information Security</h3>
-        <p>ITE Central</p>
+      <div class="timeline-item">
+        <div class="timeline-date">Jan 2019 - Jan 2021</div>
+        <div class="timeline-content">Nitec in Information Security, ITE Central</div>
       </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-date">Jan 2015 - Dec 2018</div>
-      <div class="timeline-content">
-        <h3>Shuqun Secondary School</h3>
+      <div class="timeline-item">
+        <div class="timeline-date">Jan 2015 - Dec 2018</div>
+        <div class="timeline-content">Shuqun Secondary School</div>
       </div>
     </div>
   </div>
-</section>
 
 
 
