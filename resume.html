@@ -65,12 +65,19 @@ body {
 
 /* Optional responsive styling for smaller screens */
 @media screen and (max-width: 768px) {
-    .timeline {
-        width: 90%; /* Make timeline take up more space on smaller screens */
+   .timeline {
+        width: 100%; /* Make timeline take up the full width on small screens */
+        margin: 0; /* Remove centering margin */
+        padding-left: 20px; /* Align to the left */
+        border-left: none; /* Remove vertical line */
     }
 
     .timeline-item {
         padding-left: 20px; /* Adjust padding for mobile */
+    }
+
+    .timeline-item::before {
+        left: -10px; /* Move bullet to the left */
     }
 }
 
