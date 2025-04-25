@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="css/style2.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="./img/logo.png">
-
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -34,13 +35,37 @@
 
   <div >
 
+            <!-- project 0 -->
+      <div class="resume-row-project"  data-aos="fade-right">
+        <div class="left-column-projects">
+            <h2>Mindlink Groups Website</h2>
+
+          <div class="desc" style="text-align: justify;">
+This project was completed during my NYP internship, where I focused on enhancing the company’s website, which was built on the Odoo platform. The development involved working with technologies such as <b>Python</b> for backend logic, <b>XML</b> for view customization, and <b>JavaScript</b>, <b>CSS</b>, and <b>Bootstrap</b> for frontend design and interactivity. One of the main features I created was the agent management system, which allows administrators to manage agent information efficiently. It also includes a function to generate digital business cards for each agent, enabling them to use these e-cards for professional purposes.
+
+<br><br>
+Another important feature I developed was the e-submit system. Unlike the traditional submission method, this feature allows employees to submit documents directly through the website. Employees are required to fill in relevant information, such as pricing details, and submit it to the admin. The admin then verifies the data to ensure its accuracy before passing the information to the invoicing module. This improves the submission workflow and minimizes the risk of human error.
+
+
+              <br><br>
+The third feature I implemented was calendar integration. When a submission involves a rental agreement, a calendar reminder is automatically created. This is especially helpful for agents who manage multiple rental transactions, as it eliminates the need to manually record each deadline. The system not only records the dates but also reminds agents when rental contracts are approaching their deadlines.
+
+          </div>
+        </div>
+        <div class="right-column-project" style="padding:12px;">
+          <img src="./img/mindlink_web.png" style="object-fit:cover;" alt="Company Image">
+
+        </div>
+      </div>
+
+
 
             <!-- project 1 -->
-      <div class="resume-row-project" >
+      <div class="resume-row-project" data-aos="fade-left">
         <div class="left-column-projects">
             <h2>Packet tracer project</h2>
 
-          <div class="desc">
+          <div class="desc" style="text-align: justify;">
 This project was created during my higher Nitec years, the main purpose of this project was to focus on implementing VPNs and firewalls, preventing cyber attacks, providing confidentiality by establishing a secure connection, monitoring the incoming packets and blocking unauthorized access. My role in this project was to install and configure the Firewall and router.
 <br><br>
 One challenge I encountered during this project was that after the configuration of the firewall and router, the network traffic slowed down considerably, resulting in a delay in the process of data transfer.
@@ -57,12 +82,12 @@ One challenge I encountered during this project was that after the configuration
       </div>
 
 
-                  <!-- project 1 -->
-      <div class="resume-row-project" >
+                  <!-- project 2 -->
+      <div class="resume-row-project" data-aos="fade-right">
         <div class="left-column-projects">
             <h2>Window OS hardening</h2>
 
-          <div class="desc">
+          <div class="desc" style="text-align: justify;">
 This project was created during my higher Nitec years. It focuses on how to increase the security level of end devices and provide reliable connection within a network by using a firewall, antivirus software and setting configuration. High-level security plays a vital role in the industry as it can prevent unauthorized access as well as cyber-attacks. My role in this project was to configure end devices for companies to enhance their network security.
 
 <br><br>
@@ -117,17 +142,19 @@ However, there are various types of end devices and all of them possess differen
   </div>
 
 
+</div>
 
 <div id="footer"></div>
 
 
 
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
+    AOS.init(); // Initialize AOS animations
+
     // Scroll to top after everything is fully loaded
     window.addEventListener('load', function () {
-        // Force scroll to the top using both body and document
         setTimeout(function () {
-            // Scroll to top in case of page reload
             document.documentElement.scrollTop = 0; // For most browsers
             document.body.scrollTop = 0;            // For Safari
         }, 10);
