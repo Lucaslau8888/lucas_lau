@@ -48,13 +48,28 @@ padding:10px 10px 50px 10px;
 }
 
     .skills-grid1 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 150px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 40px; /* space between the items */
     padding: 18px;
+    justify-items: center; /* center items inside each column */
     text-align: center;
 }
+
+    /* Tablet view (width less than 900px) */
+@media (max-width: 900px) {
+    .skills-grid1 {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+    }
+}
+
+/* Mobile view (width less than 600px) */
+@media (max-width: 600px) {
+    .skills-grid1 {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+}
+    
 </style>
 </head>
 <body>
