@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
-    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="./img/logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
 <body>
 
 <div id="navbar">
-  <nav style="display: flex; justify-content: space-between; align-items: center;">
+  <nav style="display: flex; justify-content: space-between; align-items: center; ">
     <ul style="display: flex; gap: 20px; list-style-type: none; margin: 0; padding: 0;">
       <li><a href="index.html">Lucas Lau</a></li>
       <li><a href="resume.html" >Resume</a></li>
@@ -33,10 +33,11 @@
 
             <h1 id="title2">Projects</h1>
 
-  <div >
+  <div style=" max-width: 100%; overflow: hidden; ">
 
-            <!-- project 0 -->
-      <div class="resume-row-project"  data-aos="fade-right">
+
+<!--                               project 4-->
+      <div class="resume-row-project" data-aos="fade-left">
         <div class="left-column-projects">
             <h2>Mindlink Groups Website</h2>
 
@@ -44,23 +45,48 @@
 This project was completed during my NYP internship, where I focused on enhancing the company’s website, which was built on the Odoo platform. The development involved working with technologies such as <b>Python</b> for backend logic, <b>XML</b> for view customization, and <b>JavaScript</b>, <b>CSS</b>, and <b>Bootstrap</b> for frontend design and interactivity. One of the main features I created was the agent management system, which allows administrators to manage agent information efficiently. It also includes a function to generate digital business cards for each agent, enabling them to use these e-cards for professional purposes.
 
 <br><br>
+
 Another important feature I developed was the e-submit system. Unlike the traditional submission method, this feature allows employees to submit documents directly through the website. Employees are required to fill in relevant information, such as pricing details, and submit it to the admin. The admin then verifies the data to ensure its accuracy before passing the information to the invoicing module. This improves the submission workflow and minimizes the risk of human error.
+<br><br>
 
-
-              <br><br>
 The third feature I implemented was calendar integration. When a submission involves a rental agreement, a calendar reminder is automatically created. This is especially helpful for agents who manage multiple rental transactions, as it eliminates the need to manually record each deadline. The system not only records the dates but also reminds agents when rental contracts are approaching their deadlines.
 
           </div>
         </div>
-        <div class="right-column-project" style="padding:12px;">
+        <div class="right-column-project" style="padding:0px !important;">
           <img src="./img/mindlink_web.png" style="object-fit:cover;" alt="Company Image">
 
         </div>
       </div>
 
 
+<!--                               project 3-->
+      <div class="resume-row-project" data-aos="fade-right">
+        <div class="left-column-projects">
+            <h2>I@FAD - AI Feed Dispenser</h2>
 
-            <!-- project 1 -->
+          <div class="desc" style="text-align: justify;">
+During my Final Year Project at Nanyang Polytechnic, I worked on a project called <b>I@FAD – Development of an Intelligent Aquatic Feed Dispenser to Increase Productivity</b>. The purpose of the project was to make fish feeding automatic using <b>artificial intelligence (AI)</b>. This helps fish farmers save time and effort, while also making sure the fish are fed properly and consistently.
+
+<br><br>
+
+My role was to improve the AI system so it could detect <b>fish food (pellets)</b> more accurately. I collected and prepared many <b>images of the pellets</b> to train the AI and tested it to make sure it could work well in different conditions, such as changes in lighting or water clarity. This helped the system become more reliable and ready for use in real fish farms.
+              <br><br>
+
+I also created a <b>user-friendly website</b> using <b>HTML</b>, <b>CSS</b>, and <b>JavaScript</b> that allows users to control the feeding system without needing any coding knowledge. Through the website, users can easily set <b>feeding times</b> and <b>limits</b> to stop feeding when too much food is detected. This makes the system more accessible and efficient for employees. Additionally, I developed a <b>graph feature</b> using <b>JavaScript libraries</b> like <b>Chart.js</b> that allows administrators to visualize feeding activity over time, helping them review patterns and spot any unusual behavior. The system also sends <b>email alerts</b> using <b>Python</b> and <b>SMTP</b> if it detects a consistent drop in feeding activity.
+
+          </div>
+        </div>
+        <div class="right-column-project" style="padding:0px !important;">
+          <img src="./img/AI.png" style="object-fit:fill; " alt="Company Image">
+
+        </div>
+      </div>
+
+
+
+
+            <!-- project 2 -->
       <div class="resume-row-project" data-aos="fade-left">
         <div class="left-column-projects">
             <h2>Packet tracer project</h2>
@@ -77,12 +103,10 @@ One challenge I encountered during this project was that after the configuration
           <img src="./img/project1.jpg" alt="Company Image">
 
         </div>
-
-
       </div>
 
 
-                  <!-- project 2 -->
+                  <!-- project 1 -->
       <div class="resume-row-project" data-aos="fade-right">
         <div class="left-column-projects">
             <h2>Window OS hardening</h2>
@@ -100,6 +124,9 @@ However, there are various types of end devices and all of them possess differen
 
         </div>
       </div>
+
+
+
 
 
 

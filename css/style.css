@@ -467,6 +467,7 @@ margin-left:-10px;
     display: grid;
     grid-template-columns: 2fr 1fr; /* 2 parts content, 1 part image/message */
     gap: 20px;
+
     padding-bottom:80px;
     margin-top: 20px;
     align-items: start;
@@ -523,7 +524,7 @@ margin-bottom:-18px;
 
     .right-column-project img{
        width: 80%;
-      padding:1px;
+      padding:20px;
       max-width: 500px;
             height: 250px;
 
