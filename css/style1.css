@@ -310,6 +310,13 @@ margin-left:-10px;
     padding: 0; /* Add padding for spacing */
     }
 
+    .testimonial-content {
+
+    font-size: 17px;
+
+}
+
+
     #sec1 {
         flex-direction: column; /* Stack vertically */
         text-align: center;
@@ -343,7 +350,7 @@ margin-left:-10px;
     }
 
     .text-section p {
-        font-size: 18px !important;
+        font-size: 17px !important;
         text-align: justify !important;
     }
 
@@ -574,7 +581,10 @@ padding:14px;
         background-color: transparent !important;
     grid-template-columns: 1fr;
  border-bottom:1px solid #D3D3D3;
+
    }
+
+
 
      .resume-row-project {
         background-color: transparent !important;
@@ -600,6 +610,7 @@ padding:14px;
         background-color: transparent !important;
           grid-template-columns:1fr ;
 
+
   }
 
     .resume-row-edu .right-column .desc {
@@ -610,10 +621,20 @@ font-size:13px !important;
 
   }
 
+      .resume-row .right-column .desc {
+font-size:16px !important;
+
+
+  }
+
   .resume-row-project .left-column-projects .desc {
-  font-size:18px !important;
+  font-size:16px !important;
   text-align: justify;  /* <== this justifies the text */
   padding-bottom:18px;
+  }
+    .resume-row-project .left-column-projects {
+  font-size:16px !important;
+
   }
 
     .right-column-project img{
@@ -630,7 +651,7 @@ font-size:13px !important;
 
 
       .resume-row-skill .center-column .desc ul li{
-font-size:18px !important;
+font-size:16px !important;
   text-align: left;
   }
 
