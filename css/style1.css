@@ -609,6 +609,9 @@ padding:14px;
       .resume-row-skill {
         background-color: transparent !important;
           grid-template-columns:1fr ;
+              padding: 0px !important;
+                  gap: 0px !important;
+                  margin-bottom:-80px !important
 
 
   }
