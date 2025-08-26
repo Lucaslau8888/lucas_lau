@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Key Search</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background: #f8f9fa;
+    }
+    h1 {
+        color: #333;
+    }
+    .search-box {
+        margin-bottom: 20px;
+    }
+    input {
+        width: 300px;
+        padding: 8px;
+        font-size: 16px;
+    }
+    button {
+        padding: 8px 15px;
+        font-size: 16px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    .result {
+        margin-top: 20px;
+        padding: 15px;
+        background: #fff;
+        border: 1px solid #ccc;
+        width: 500px;
+    }
+</style>
+</head>
+<body>
+
+<h1>Key Lookup</h1>
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="Enter description or location">
+    <button onclick="searchKey()">Search</button>
+</div>
+
+<div class="result" id="result">Enter a keyword to search.</div>
+
+<script>
+async function loadData() {
+    const response = await fetch('item.txt');
+    const text = await response.text();
+    return text.split('\n');
+}
+
+async function searchKey() {
+    const query = document.getElementById('searchInput').value.trim().toLowerCase();
+    const data = await loadData();
+    let resultText = "<b>No results found.</b>";
+
+    if (query) {
+        const matches = data.filter(line => line.toLowerCase().includes(query));
+        if (matches.length > 0) {
+            resultText = matches.join('<br>');
+        }
+    }
+    document.getElementById('result').innerHTML = resultText;
+}
+</script>
+
+</body>
+</html>
