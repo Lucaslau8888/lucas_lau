@@ -7,61 +7,130 @@
 <style>
     body {
         font-family: Arial, sans-serif;
-        margin: 20px;
-        background: #f8f9fa;
+        margin: 0;
+        padding: 0;
+        background: #f0f2f5;
+    }
+    .container {
+        max-width: 700px;
+        margin: 50px auto;
+        background: #fff;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     h1 {
+        text-align: center;
         color: #333;
-    }
-    .search-box {
         margin-bottom: 20px;
     }
-    input {
-        width: 300px;
-        padding: 8px;
+    .search-box {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    .search-controls {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
         font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
     }
     button {
-        padding: 8px 15px;
+        padding: 10px 20px;
         font-size: 16px;
-        margin-left: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: white;
         cursor: pointer;
+        transition: background 0.3s;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    .radio-group {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        font-size: 16px;
     }
     .result {
         margin-top: 20px;
         padding: 15px;
-        background: #fff;
+        background: #fafafa;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 15px;
+        line-height: 1.6;
+        max-height: 400px;
+        overflow-y: auto;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
         border: 1px solid #ccc;
-        width: 500px;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f8f8f8;
     }
 </style>
 </head>
 <body>
 
-<h1>Key Lookup</h1>
-<div class="search-box">
-    <input type="text" id="searchInput" placeholder="Enter description or location">
-    <button onclick="searchKey()">Search</button>
+<div class="container">
+    <h1>Key Lookup</h1>
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Enter your search term...">
+        <div class="radio-group">
+            <label><input type="radio" name="searchType" value="no" /> No.</label>
+            <label><input type="radio" name="searchType" value="description" checked /> Description</label>
+        </div>
+        <div class="search-controls">
+            <button onclick="searchKey()">Search</button>
+        </div>
+    </div>
+    <div class="result" id="result">Enter a keyword and click search.</div>
 </div>
-
-<div class="result" id="result">Enter a keyword to search.</div>
 
 <script>
 async function loadData() {
     const response = await fetch('items.txt');
     const text = await response.text();
-    return text.split('\n');
+    return text.split('\n').map(line => line.split('|'));
 }
 
 async function searchKey() {
     const query = document.getElementById('searchInput').value.trim().toLowerCase();
+    const searchType = document.querySelector('input[name="searchType"]:checked').value;
     const data = await loadData();
+
     let resultText = "<b>No results found.</b>";
 
     if (query) {
-        const matches = data.filter(line => line.toLowerCase().includes(query));
+        // Determine which column to search
+        let columnIndex = searchType === "no" ? 0 : 3;
+
+        // Remove header and filter matches
+        const matches = data.slice(1).filter(row => row[columnIndex] && row[columnIndex].toLowerCase().includes(query));
+
         if (matches.length > 0) {
-            resultText = matches.join('<br>');
+            resultText = "<table><tr><th>No.</th><th>No. of Keys</th><th>Location</th><th>Description</th><th>Remarks</th></tr>";
+            matches.forEach(row => {
+                resultText += `<tr>${row.map(col => `<td>${col}</td>`).join('')}</tr>`;
+            });
+            resultText += "</table>";
         }
     }
     document.getElementById('result').innerHTML = resultText;
