@@ -65,9 +65,9 @@ No.|No. of keys|Location
 64|1|Level 2|BA BATTERY REMOVAL KEY|
 65|3|Yard |CLOTHING POD |
 66|2|Yard|DOUBLE CAB (YN3647U)|
-67|3|Yard|FOAM TOTE
-68|1|Engine Bay| LF4G (GBD613X)
-69|1|Engine Bay|LF5G (GBF2930Y)
+67|3|Yard|FOAM TOTE |
+68|1|Engine Bay| LF4G (GBD613X)|
+69|1|Engine Bay|LF5G (GBF2930Y)|
 70|3|Sliding Pole|SECTION A| Near to basketball court
 71|3|Sliding Pole|SECTION B| Near to lift
 72|6|Sliding Pole|SECTION C|staircase landing
