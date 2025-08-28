@@ -113,7 +113,11 @@ async function loadData() {
 }
 
 async function searchKey() {
-    const query = document.getElementById('searchInput').value.trim().toLowerCase();
+    const query = document.getElementById('searchInput').value
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g, ''); // remove all spaces in the query
+
     const searchType = document.querySelector('input[name="searchType"]:checked').value;
     const data = await loadData();
 
@@ -124,7 +128,15 @@ async function searchKey() {
         let columnIndex = searchType === "no" ? 0 : 3;
 
         // Remove header and filter matches
-        const matches = data.slice(1).filter(row => row[columnIndex] && row[columnIndex].toLowerCase().includes(query));
+        const matches = data.slice(1).filter(row => {
+            if (row[columnIndex]) {
+                const normalizedValue = row[columnIndex]
+                    .toLowerCase()
+                    .replace(/\s+/g, ''); // remove spaces in data for comparison
+                return normalizedValue.includes(query);
+            }
+            return false;
+        });
 
         if (matches.length > 0) {
             resultText = "<table><tr><th>No.</th><th>No. of Keys</th><th>Location</th><th>Description</th><th>Remarks</th></tr>";
@@ -134,6 +146,7 @@ async function searchKey() {
             resultText += "</table>";
         }
     }
+
     document.getElementById('result').innerHTML = resultText;
 }
 </script>
